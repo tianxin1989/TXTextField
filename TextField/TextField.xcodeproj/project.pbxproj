@@ -15,6 +15,10 @@
 		B09B573E205FB85D00D69D74 /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = B09B573D205FB85D00D69D74 /* main.m */; };
 		B09B5748205FB85D00D69D74 /* TextFieldTests.m in Sources */ = {isa = PBXBuildFile; fileRef = B09B5747205FB85D00D69D74 /* TextFieldTests.m */; };
 		B09B5753205FB85D00D69D74 /* TextFieldUITests.m in Sources */ = {isa = PBXBuildFile; fileRef = B09B5752205FB85D00D69D74 /* TextFieldUITests.m */; };
+		B09B577A205FBA3D00D69D74 /* NSString+Common.m in Sources */ = {isa = PBXBuildFile; fileRef = B09B5779205FBA3D00D69D74 /* NSString+Common.m */; };
+		B09B577D205FBA8900D69D74 /* TXTextField.m in Sources */ = {isa = PBXBuildFile; fileRef = B09B577C205FBA8900D69D74 /* TXTextField.m */; };
+		B09B5781205FBAC600D69D74 /* MyInfoViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = B09B577E205FBAC600D69D74 /* MyInfoViewController.m */; };
+		B09B5782205FBAC600D69D74 /* MyInfoViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = B09B577F205FBAC600D69D74 /* MyInfoViewController.xib */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -51,6 +55,13 @@
 		B09B574E205FB85D00D69D74 /* TextFieldUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = TextFieldUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		B09B5752205FB85D00D69D74 /* TextFieldUITests.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = TextFieldUITests.m; sourceTree = "<group>"; };
 		B09B5754205FB85D00D69D74 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		B09B5778205FBA3D00D69D74 /* NSString+Common.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "NSString+Common.h"; sourceTree = "<group>"; };
+		B09B5779205FBA3D00D69D74 /* NSString+Common.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = "NSString+Common.m"; sourceTree = "<group>"; };
+		B09B577B205FBA8900D69D74 /* TXTextField.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = TXTextField.h; sourceTree = "<group>"; };
+		B09B577C205FBA8900D69D74 /* TXTextField.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = TXTextField.m; sourceTree = "<group>"; };
+		B09B577E205FBAC600D69D74 /* MyInfoViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MyInfoViewController.m; sourceTree = "<group>"; };
+		B09B577F205FBAC600D69D74 /* MyInfoViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = MyInfoViewController.xib; sourceTree = "<group>"; };
+		B09B5780205FBAC600D69D74 /* MyInfoViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MyInfoViewController.h; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -101,10 +112,14 @@
 		B09B572D205FB85D00D69D74 /* TextField */ = {
 			isa = PBXGroup;
 			children = (
+				B09B576C205FB99500D69D74 /* TXTextField */,
 				B09B572E205FB85D00D69D74 /* AppDelegate.h */,
 				B09B572F205FB85D00D69D74 /* AppDelegate.m */,
 				B09B5731205FB85D00D69D74 /* ViewController.h */,
 				B09B5732205FB85D00D69D74 /* ViewController.m */,
+				B09B5780205FBAC600D69D74 /* MyInfoViewController.h */,
+				B09B577E205FBAC600D69D74 /* MyInfoViewController.m */,
+				B09B577F205FBAC600D69D74 /* MyInfoViewController.xib */,
 				B09B5734205FB85D00D69D74 /* Main.storyboard */,
 				B09B5737205FB85D00D69D74 /* Assets.xcassets */,
 				B09B5739205FB85D00D69D74 /* LaunchScreen.storyboard */,
@@ -130,6 +145,17 @@
 				B09B5754205FB85D00D69D74 /* Info.plist */,
 			);
 			path = TextFieldUITests;
+			sourceTree = "<group>";
+		};
+		B09B576C205FB99500D69D74 /* TXTextField */ = {
+			isa = PBXGroup;
+			children = (
+				B09B5778205FBA3D00D69D74 /* NSString+Common.h */,
+				B09B5779205FBA3D00D69D74 /* NSString+Common.m */,
+				B09B577B205FBA8900D69D74 /* TXTextField.h */,
+				B09B577C205FBA8900D69D74 /* TXTextField.m */,
+			);
+			path = TXTextField;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -240,6 +266,7 @@
 			files = (
 				B09B573B205FB85D00D69D74 /* LaunchScreen.storyboard in Resources */,
 				B09B5738205FB85D00D69D74 /* Assets.xcassets in Resources */,
+				B09B5782205FBAC600D69D74 /* MyInfoViewController.xib in Resources */,
 				B09B5736205FB85D00D69D74 /* Main.storyboard in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -265,8 +292,11 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				B09B577A205FBA3D00D69D74 /* NSString+Common.m in Sources */,
 				B09B5733205FB85D00D69D74 /* ViewController.m in Sources */,
+				B09B577D205FBA8900D69D74 /* TXTextField.m in Sources */,
 				B09B573E205FB85D00D69D74 /* main.m in Sources */,
+				B09B5781205FBAC600D69D74 /* MyInfoViewController.m in Sources */,
 				B09B5730205FB85D00D69D74 /* AppDelegate.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -431,7 +461,9 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_TEAM = 4AHBH8574Z;
 				INFOPLIST_FILE = TextField/Info.plist;
+				IPHONEOS_DEPLOYMENT_TARGET = 9.0;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = "-63971868-qq.com.TextField";
 				PRODUCT_NAME = "$(TARGET_NAME)";
@@ -444,7 +476,9 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_TEAM = 4AHBH8574Z;
 				INFOPLIST_FILE = TextField/Info.plist;
+				IPHONEOS_DEPLOYMENT_TARGET = 9.0;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = "-63971868-qq.com.TextField";
 				PRODUCT_NAME = "$(TARGET_NAME)";
